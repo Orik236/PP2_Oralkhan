@@ -1,0 +1,7 @@
+C:\Users\Оралхан\source\repos\firstlab\PP2\week 1\Task1\task1\bin\Debug\LAb1.exe.config
+C:\Users\Оралхан\source\repos\firstlab\PP2\week 1\Task1\task1\bin\Debug\LAb1.exe
+C:\Users\Оралхан\source\repos\firstlab\PP2\week 1\Task1\task1\bin\Debug\LAb1.pdb
+C:\Users\Оралхан\source\repos\firstlab\PP2\week 1\Task1\task1\obj\Debug\Task1.csprojAssemblyReference.cache
+C:\Users\Оралхан\source\repos\firstlab\PP2\week 1\Task1\task1\obj\Debug\Task1.csproj.CoreCompileInputs.cache
+C:\Users\Оралхан\source\repos\firstlab\PP2\week 1\Task1\task1\obj\Debug\LAb1.exe
+C:\Users\Оралхан\source\repos\firstlab\PP2\week 1\Task1\task1\obj\Debug\LAb1.pdb

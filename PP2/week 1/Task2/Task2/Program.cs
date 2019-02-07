@@ -21,12 +21,10 @@ namespace Task2
 
 		public void PrintInfo()
 		{
-			Console.Write("Student: ");
-			Console.WriteLine(name);
-			Console.Write("Student`s id number: ");
-			Console.WriteLine(id);
-			Console.Write("Student`s year of study: ");
-			Console.WriteLine(year);
+			int Year = int.Parse(year);
+			Console.WriteLine($"Name: {name} ID: {id} Year: {Year}");
+			Year++;
+			Console.WriteLine($"Name: {name} ID: {id} Year: {Year}");
 		}
 	}
 	class Program

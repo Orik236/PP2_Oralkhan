@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Text.RegularExpressions;
 
 namespace LAb1
 {
@@ -10,37 +11,32 @@ namespace LAb1
 	{
 		static void Main(string[] args)
 		{
-			string a = Console.ReadLine(); //Created string number
-			int a2 = int.Parse(a); //Converted string to int
-			int[] b = new int[a2]; //Created massive
-			int cnt = 0; //created cnt to count the number of prime numbers
-			int[] b2 = new int[a2]; // created a massive to save all prime numbers
-			for (int i = 0; i < b.Length; ++i) //with for we can "read" numbers in array
+			string size = Console.ReadLine();//we created class string
+			int lenght = int.Parse(size); // converte string 'size' to int
+			string a = Console.ReadLine(); //created number type string. Ex: "1 2 3 4 5"
+			string[] a2 = Regex.Split(a," "); //created string Array without " ". Ex: "12345"
+			int[] b = new int[lenght]; //created int Array where we input prime numbers
+			int cnt = 0; //created counter
+			foreach (var i in a2) // created cycle from first element to last element in string array
 			{
-				a = Console.ReadLine();
-				int aa2 = int.Parse(a); //Converted string to int
-				b[i] = aa2;
-			}
-			for (int i = 0; i < b.Length; ++i) //with for we found prime numbers in array(b)
-			{
-				for (int j = 2; j <= Math.Sqrt(b[i]); ++j) //we divide number by from j to sqrt number
+				int x = int.Parse(i);//converted string number to int
+				for (int j = 2; j <= Math.Sqrt(x); ++j)//created cycle to check prime number or not
 				{
-					if (b[i] % j == 0) //if number divided by j
+					if(x % j == 0)//check divided number x by j or not
 					{
-						b[i] = -1; // assign value
-						break; //break for
+						x = -1;//x equal to "-1"
+						break;//finish cycle
 					}
 				}
-				if (b[i] != -1 && b[i] > 1) //if number not equal to -1 and bigger than 1 we do next
+				if(x != -1 && x > 1)//if x not equal to "-1" or x not less then 2
 				{
-					b2[cnt] = b[i]; //we put prime number in second array
-					cnt++; //we increased cnt
+					b[cnt] = x;//input x number in b
+					cnt++;//increased counter
 				}
 			}
-			for (int i = 0; i < cnt; ++i) // with for we print prime numbers
+			for (int i = 0; i < cnt; ++i)//created cycle
 			{
-				Console.Write(b2[i]);//print prime number
-				Console.Write(" ");//we shared our numbers
+				Console.Write(b[i] + " ");//print number b[i] and " "
 			}
 		}
 	}
