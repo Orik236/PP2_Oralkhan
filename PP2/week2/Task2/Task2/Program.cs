@@ -12,16 +12,16 @@ namespace Task2
 	{
 		static void Main(string[] args)
 		{
-			string s = "";
-			string t = Console.ReadLine();
-			System.IO.StreamReader file = new System.IO.StreamReader(t);
-			string line = file.ReadLine();
-			string[] arr = Regex.Split(line, " ");
-			int x;
-			foreach(string i in arr)
+			string s = ""; //Create null string
+			string t = Console.ReadLine(); //Read way to file
+			StreamReader file = new StreamReader(t); //Read text in file
+			string line = file.ReadLine(); //line equal text in file
+			string[] arr = Regex.Split(line, " "); //Create string array without " "
+			int x; 
+			foreach(string i in arr) //Check all number in array palindrome or not
 			{
-				x = int.Parse(i);
-				for(int z = 2; z <= Math.Sqrt(x); ++z)
+				x = int.Parse(i); //Create string to int
+				for(int z = 2; z <= Math.Sqrt(x); ++z) //Check palindrome or not
 				{
 					if(x % z == 0)
 					{
@@ -36,9 +36,9 @@ namespace Task2
 
 				}
 			}
-			file.Close();
-			string t2 = Console.ReadLine();
-			System.IO.File.WriteAllText(t2, s);
+			file.Close(); //Close file
+			string t2 = Console.ReadLine(); //Read way to textfile where we input our numbers
+			File.WriteAllText(t2, s); //write in second file prime numbers
 		}
 	}
 }

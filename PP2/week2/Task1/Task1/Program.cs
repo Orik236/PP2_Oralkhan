@@ -11,12 +11,12 @@ namespace Task1
 	{
 		static void Main(string[] args)
 		{
-			string t = Console.ReadLine();
-			string line;
-			bool k = true;
-			System.IO.StreamReader file = new System.IO.StreamReader(t);
-			line = file.ReadLine();
-			for(int i = 0; i < line.Length; ++i)
+			string t = Console.ReadLine();  //way to file
+			string line; //created string
+			bool k = true; //check palindrom or not
+			StreamReader file = new StreamReader(t); //Read our file
+			line = file.ReadLine(); //line equal to text in file
+			for(int i = 0; i < line.Length; ++i) //check palindrome line or not with cycle
 			{
 				if(line[i] != line[line.Length - 1 - i])
 				{

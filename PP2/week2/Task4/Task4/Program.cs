@@ -11,15 +11,14 @@ namespace Task4
 	{
 		static void Main(string[] args)
 		{
-			string folderName = @"C:\Users\Оралхан\Desktop";
-			string path = Path.Combine(folderName, "test2");
-			Directory.CreateDirectory(path);
-			string source = @"C:\Users\Оралхан\Desktop\test";
-			string[] files = Directory.GetFiles(source);
-			foreach(string file in files)
+			string path= @"C:\Users\Оралхан\Desktop\test2"; //Write path where we create text file
+			Directory.CreateDirectory(path); //Create file
+			string source = @"C:\Users\Оралхан\Desktop\test"; //Write way to file where we take all files
+			string[] files = Directory.GetFiles(source); //Create string array
+			foreach(string file in files)//Create cycle
 			{
-				File.Copy(file, Path.Combine(path, Path.GetFileName(file)));
-				File.Delete(file);
+				File.Copy(file, Path.Combine(path, Path.GetFileName(file)));//Copy all files in test to test2
+				File.Delete(file);//Delete file test
 			}
 		}
 	}
