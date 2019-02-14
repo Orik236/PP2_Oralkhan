@@ -59,7 +59,7 @@ namespace FarManager
 				SelectedIndex = 0;
 			}
 			Console.Clear();
-			Console.WriteLine("Rename: TAB || Delete: Del");
+			Console.WriteLine("Open: Enter || Rename: TAB || Delete: Del || Back: BackSpace || Close: ESC");
 			Console.WriteLine();
 			for (int i = begin; i < Math.Min(end, Content.Length); ++i) // show files from begin to end
 			{
