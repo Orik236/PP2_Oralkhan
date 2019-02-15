@@ -13,23 +13,23 @@ namespace Task2
 		static void Main(string[] args)
 		{
 			string s = ""; //Create null string
-			string t = Console.ReadLine(); //Read way to file
+			string t = @"C:\Users\Оралхан\source\repos\firstlab\PP2\week2\Task2\task2_input.txt"; //Read way to file
 			StreamReader file = new StreamReader(t); //Read text in file
 			string line = file.ReadLine(); //line equal text in file
 			string[] arr = Regex.Split(line, " "); //Create string array without " "
-			int x; 
-			foreach(string i in arr) //Check all number in array palindrome or not
+			int x;
+			foreach (string i in arr) //Check all number in array palindrome or not
 			{
 				x = int.Parse(i); //Create string to int
-				for(int z = 2; z <= Math.Sqrt(x); ++z) //Check palindrome or not
+				for (int z = 2; z <= Math.Sqrt(x); ++z) //Check palindrome or not
 				{
-					if(x % z == 0)
+					if (x % z == 0)
 					{
 						x = 0;
 						break;
 					}
 				}
-				if(x > 1)
+				if (x > 1)
 				{
 					s += i;
 					s += " ";
@@ -37,7 +37,7 @@ namespace Task2
 				}
 			}
 			file.Close(); //Close file
-			string t2 = Console.ReadLine(); //Read way to textfile where we input our numbers
+			string t2 = @"C:\Users\Оралхан\source\repos\firstlab\PP2\week2\Task2\output.txt"; //Read way to textfile where we input our numbers
 			File.WriteAllText(t2, s); //write in second file prime numbers
 		}
 	}

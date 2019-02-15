@@ -58,6 +58,7 @@ namespace FarManager
 				end = 10;
 				SelectedIndex = 0;
 			}
+			Console.ResetColor();
 			Console.Clear();
 			Console.WriteLine("Open: Enter || Rename: TAB || Delete: Del || Back: BackSpace || Close: ESC");
 			Console.WriteLine();
@@ -73,11 +74,11 @@ namespace FarManager
 				}
 				if (Content[i].GetType() == typeof(DirectoryInfo))
 				{
-					Console.ForegroundColor = ConsoleColor.Yellow;
+					Console.ForegroundColor = ConsoleColor.Blue;
 				}
 				else if(Content[i].GetType() == typeof(FileInfo))
 				{
-					Console.ForegroundColor = ConsoleColor.Blue;
+					Console.ForegroundColor = ConsoleColor.Magenta;
 				}
 				Console.Write(i + 1 + ".  ");
 				Console.WriteLine(Content[i].Name);
@@ -88,7 +89,7 @@ namespace FarManager
 		{
 			Content[SelectedIndex].Delete();
 			Console.Clear();
-			Console.WriteLine("Файл успешно удален");
+			Console.WriteLine("File succesfully deleted");
 			Console.ReadKey();
 			
 		}
@@ -159,8 +160,8 @@ namespace FarManager
 						else //we write all text  in file
 						{
 							curMode = FSIMode.File;
-							FileStream fs = new FileStream(fsi.FullName, FileMode.Open, FileAccess.Read); //Give way to our file, open mode file and read file
-							StreamReader sr = new StreamReader(fs);
+							
+							StreamReader sr = new StreamReader(fsi.FullName);
 							
 							Console.BackgroundColor = ConsoleColor.White;
 							Console.ForegroundColor = ConsoleColor.Black;

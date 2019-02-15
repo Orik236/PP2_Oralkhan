@@ -5,3 +5,10 @@ C:\Users\Оралхан\Desktop\PP2\week2\Task3\Task3\obj\Debug\Task3.csprojAsse
 C:\Users\Оралхан\Desktop\PP2\week2\Task3\Task3\obj\Debug\Task3.csproj.CoreCompileInputs.cache
 C:\Users\Оралхан\Desktop\PP2\week2\Task3\Task3\obj\Debug\Task3.exe
 C:\Users\Оралхан\Desktop\PP2\week2\Task3\Task3\obj\Debug\Task3.pdb
+C:\Users\Оралхан\source\repos\firstlab\PP2\week2\Task3\Task3\bin\Debug\Task3.exe.config
+C:\Users\Оралхан\source\repos\firstlab\PP2\week2\Task3\Task3\bin\Debug\Task3.exe
+C:\Users\Оралхан\source\repos\firstlab\PP2\week2\Task3\Task3\bin\Debug\Task3.pdb
+C:\Users\Оралхан\source\repos\firstlab\PP2\week2\Task3\Task3\obj\Debug\Task3.csprojAssemblyReference.cache
+C:\Users\Оралхан\source\repos\firstlab\PP2\week2\Task3\Task3\obj\Debug\Task3.csproj.CoreCompileInputs.cache
+C:\Users\Оралхан\source\repos\firstlab\PP2\week2\Task3\Task3\obj\Debug\Task3.exe
+C:\Users\Оралхан\source\repos\firstlab\PP2\week2\Task3\Task3\obj\Debug\Task3.pdb

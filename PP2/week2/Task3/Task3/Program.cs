@@ -18,7 +18,6 @@ namespace Task3
 		}
 		public static void DirWr(DirectoryInfo dirInfo, int lvl) //create function
 		{
-			Console.ForegroundColor = ConsoleColor.Yellow;//all text is yellow(just fun)
 			foreach(var i in dirInfo.GetFiles()) //print all files in directory with " "
 			{
 				LvLUp(lvl);//print " "

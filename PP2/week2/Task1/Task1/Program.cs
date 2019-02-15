@@ -11,20 +11,20 @@ namespace Task1
 	{
 		static void Main(string[] args)
 		{
-			string t = Console.ReadLine();  //way to file
+			string t = @"C:\Users\Оралхан\source\repos\firstlab\PP2\week2\Task1\task1.txt";  //way to file
 			string line; //created string
 			bool k = true; //check palindrom or not
 			StreamReader file = new StreamReader(t); //Read our file
 			line = file.ReadLine(); //line equal to text in file
-			for(int i = 0; i < line.Length; ++i) //check palindrome line or not with cycle
+			for (int i = 0; i < line.Length; ++i) //check palindrome line or not with cycle
 			{
-				if(line[i] != line[line.Length - 1 - i])
+				if (line[i] != line[line.Length - 1 - i])
 				{
 					k = false;
 					break;
 				}
 			}
-			if(k == true)
+			if (k == true)
 			{
 				Console.WriteLine("YES");
 			}
