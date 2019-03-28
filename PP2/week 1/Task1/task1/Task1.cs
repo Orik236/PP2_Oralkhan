@@ -34,6 +34,7 @@ namespace LAb1
 					cnt++;//increased counter
 				}
 			}
+			Console.WriteLine(cnt);
 			for (int i = 0; i < cnt; ++i)//created cycle
 			{
 				Console.Write(b[i] + " ");//print number b[i] and " "

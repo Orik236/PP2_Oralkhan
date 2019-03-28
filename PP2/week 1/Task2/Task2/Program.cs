@@ -10,28 +10,26 @@ namespace Task2
 	{
 		public string name;
 		public string id;
-		public string year;
+		public int year = 1;
 
-		public Student ()
+		public Student (string name, string id) //Create constructur with two parametrs
 		{
-			name = Console.ReadLine();
-			id = Console.ReadLine();
-			year = Console.ReadLine();
+			this.name = name;
+			this.id = id;
 		}
 
-		public void PrintInfo()
+		public void PrintInfo() //Print all information about student
 		{
-			int Year = int.Parse(year);
-			Console.WriteLine($"Name: {name} ID: {id} Year: {Year}");
-			Year++;
-			Console.WriteLine($"Name: {name} ID: {id} Year: {Year}");
+			Console.WriteLine($"Name: {name} ID: {id} Year: {year}");
+			year++;
+			Console.WriteLine($"Name: {name} ID: {id} Year: {year}");
 		}
 	}
 	class Program
 	{
 		static void Main(string[] args)
 		{
-			Student s = new Student();
+			Student s = new Student("Oralkhan", "18BD110937");
 			s.PrintInfo();
 		}
 	}

@@ -21,19 +21,17 @@ namespace Task2
 			foreach (string i in arr) //Check all number in array palindrome or not
 			{
 				x = int.Parse(i); //Create string to int
-				for (int z = 2; z <= Math.Sqrt(x); ++z) //Check palindrome or not
+				for(int j = 2; j <= Math.Sqrt(x); ++j)
 				{
-					if (x % z == 0)
+					if(x % j == 0)
 					{
-						x = 0;
+						x = 1;
 						break;
 					}
 				}
-				if (x > 1)
+				if(x > 1)
 				{
-					s += i;
-					s += " ";
-
+					s += i + " ";
 				}
 			}
 			file.Close(); //Close file

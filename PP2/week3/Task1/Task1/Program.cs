@@ -16,7 +16,7 @@ namespace FarManager
 	class Layer //Create Class
 	{
 		public int begin = 0;
-		public int end = 10;
+		public int end = 20;
 		public FileSystemInfo[] Content //Create array with "FileSystemInfo" type
 		{
 			get;
@@ -31,13 +31,13 @@ namespace FarManager
 		{
 			if (SelectedIndex < 0)
 			{
-				if (Content.Length < 10)
+				if (Content.Length < 20)
 				{
 					SelectedIndex = Content.Length - 1;
 				}
 				else
 				{
-					begin = Content.Length - 10;
+					begin = Content.Length - 20;
 					SelectedIndex = Content.Length - 1;
 					end = Content.Length;
 				}
@@ -55,7 +55,7 @@ namespace FarManager
 			if (SelectedIndex == Content.Length)
 			{
 				begin = 0;
-				end = 10;
+				end = 20;
 				SelectedIndex = 0;
 			}
 			Console.ResetColor();
@@ -81,7 +81,15 @@ namespace FarManager
 					Console.ForegroundColor = ConsoleColor.Magenta;
 				}
 				Console.Write(i + 1 + ".  ");
-				Console.WriteLine(Content[i].Name);
+				if(Content[i].GetType() == typeof(DirectoryInfo))
+				{
+					DirectoryInfo direct = new DirectoryInfo(Content[i].FullName);
+					Console.WriteLine(i + 1 + ".  " + Content[i].Name + " (" + direct.GetFiles("*.txt").Length + ")");
+				}
+				else
+				{
+					Console.WriteLine(i + 1 + ".  " + Content[i].Name);
+				}
 			}
 			Console.BackgroundColor = ConsoleColor.Black;
 		}
@@ -116,7 +124,7 @@ namespace FarManager
 	{
 		static void Main(string[] args)
 		{
-			DirectoryInfo dir = new DirectoryInfo(Console.ReadLine()); // read way to our directory
+			DirectoryInfo dir = new DirectoryInfo(@"C:\Users\Оралхан\Desktop\Новая папка (2)"); // read way to our directory
 			Layer l = new Layer 
 			{
 				Content  = dir.GetFileSystemInfos(),

@@ -32,9 +32,10 @@ namespace Task3
 		}
 		static void Main(string[] args)
 		{
-			DirectoryInfo dirInfo = new DirectoryInfo(Console.ReadLine());//Read way to our directory
+			DirectoryInfo dirInfo = new DirectoryInfo(@"C:\Users\Оралхан\source\repos\firstlab\PP2");//Read way to our directory
 			Console.WriteLine(dirInfo.Name);//Write Directory Name
 			DirWr(dirInfo, 0);
+
 		}
 	}
 }
