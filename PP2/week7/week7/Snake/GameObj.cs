@@ -14,7 +14,7 @@ namespace Snake
 		public GameObj()
 		{
 
-		}
+		}	
 		public GameObj(char sign)
 		{
 			this.sign = sign;

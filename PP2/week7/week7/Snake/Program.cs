@@ -29,7 +29,7 @@ namespace Snake
 			int diff = 0;
 			while (!res)
 			{
-				if(m == Menu.main)
+				if (m == Menu.main)
 				{
 					menu.Draw();
 				}

@@ -14,6 +14,7 @@ namespace Snake
 		public Worm w = new Worm('=');
 		public Wall b = new Wall('#');
 		public int score = 0;
+		public int lvl = 0;
 		public Food f = new Food('@');
 		Timer timer = new Timer();
 		XmlSerializer xs = new XmlSerializer(typeof(GameState));
@@ -27,7 +28,35 @@ namespace Snake
 			Console.CursorVisible = false;
 		}
 
+		public void ChangeLevel()
+		{
+			if (score == 2)
+			{
+				Console.Clear();
+				if (lvl < 2)
+				{
+					lvl++;
+					b.LoadLevel(lvl);
+					score++;
+					Worm w1 = new Worm('=');
+					w = w1;
+					b.Draw();
+				}
+				else
+				{
+					Win();
+				}
+			}
+		}
 
+		public void Win()
+		{
+			Console.Clear();
+			Console.SetCursorPosition(Console.WindowHeight / 2, 0);
+			Console.WriteLine("Thanks for play my Game:). Your score: " + score);
+			timer.Stop();
+			Environment.Exit(0);
+		}
 		public void Save()
 		{
 			using (FileStream fs = new FileStream("save.xml", FileMode.Create, FileAccess.Write))
@@ -115,7 +144,7 @@ namespace Snake
 			Console.Clear();
 			Console.SetCursorPosition(15, 20);
 			Console.ForegroundColor = ConsoleColor.Red;
-			Console.Write("Game Over   Your Score: " + score);
+			Console.WriteLine("Game Over   Your Score: " + score);
 			Environment.Exit(0);
 		}
 		public void CheckGameOver()
@@ -178,6 +207,7 @@ namespace Snake
 		{
 			Console.SetCursorPosition(0, 0);
 			Console.WriteLine("Your Score: " + score);
+			ChangeLevel();
 		}
 	}
 }

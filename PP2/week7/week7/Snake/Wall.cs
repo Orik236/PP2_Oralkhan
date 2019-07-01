@@ -20,6 +20,8 @@ namespace Snake
 		}
 		public void LoadLevel(int level)
 		{
+			body.Clear();
+			Console.WriteLine(level);
 			string name = string.Format("Levels/level{0}.txt", level);
 			StreamReader sr = new StreamReader(name);
 
